@@ -9,4 +9,8 @@ public class Book {
     public Genre getGenre() {
         return this.genre;
     }
+
+    public String getDescriptionFromEnum(){
+        return this.genre.getDescription();
+    }
 }
