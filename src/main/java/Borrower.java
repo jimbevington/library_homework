@@ -13,10 +13,10 @@ public class Borrower {
     }
 
     public void addBook(Library library, Book book){
-
-//      !!!   but what if the book doesn't exist?   !!!
-
         Book borrowed = library.removeBook(book);
-        this.collection.add(borrowed);
+//        add the book if it exists (is not null)
+        if (borrowed != null) {
+            this.collection.add(borrowed);
+        }
     }
 }

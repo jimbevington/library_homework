@@ -25,8 +25,14 @@ public class Library {
     }
 
     public Book removeBook(Book book){
+//        get the index of the specified book
         int index = this.books.indexOf(book);
-        return this.books.remove(index);
+//        return the book if it exists
+        if (index > -1) {
+            return this.books.remove(index);
+        }
+//        or return null
+        return null;
     }
 
 }

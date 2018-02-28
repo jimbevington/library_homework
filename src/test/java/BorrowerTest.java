@@ -29,4 +29,11 @@ public class BorrowerTest {
         assertEquals(1, borrower1.collectionCount());
         assertEquals(0, library.bookCount());
     }
+
+    @Test
+    public void canAddBook__noBooks(){
+        borrower1.addBook(library, book1);
+        assertEquals(0, borrower1.collectionCount());
+        assertEquals(0, library.bookCount());
+    }
 }
